@@ -12,7 +12,6 @@ export const BuildingPortfolio = () => {
             <Header>Skill building</Header>
             <LightTxt>Build your future</LightTxt>
           </div>
-          {/* <i  class="fas fa-arrow-right"></i> */}
         </ListItem>
         <ListItem>
           <i class="far fa-clipboard"></i>
@@ -38,14 +37,17 @@ const Container = styled.div`
   padding: 1.25rem;
   border-radius: 0.5rem;
   margin-bottom: 2.5rem;
-  @media only screen and (max-width:768px){
-  margin-top: 1.875rem;
+  @media only screen and (max-width: 768px) {
+    margin-top: 1.875rem;
   }
 `;
 const Title = styled.p`
   font-size: 1.25rem;
   font-weight: 600;
   color: #4f4f4f;
+  @media only screen and (max-width: 830px) {
+    font-size: 1rem;
+  }
 `;
 const ListItem = styled.li`
   list-style: none;
@@ -57,8 +59,10 @@ const ListItem = styled.li`
 const Header = styled.p`
   font-size: 1rem;
   line-height: 1.25rem;
-
   margin-left: 0.9375rem;
+  @media only screen and (max-width: 830px) {
+    font-size: 0.875rem;
+  }
 `;
 const LightTxt = styled.p`
   font-size: 0.875rem;
@@ -66,4 +70,7 @@ const LightTxt = styled.p`
   color: #828282;
   margin-top: -0.9375rem;
   margin-left: 0.9375rem;
+  @media only screen and (max-width: 768px) {
+    font-size: 0.75rem;
+  }
 `;

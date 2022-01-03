@@ -34,21 +34,21 @@ const Container = styled.div`
   background: rgb(248 248 248 / 4);
   display: flex;
   justify-content: space-between;
-  min-width: 100%;
-  @media only screen and (max-width:768px){
-  display: block;
-  
+  width: 100%;
+  @media only screen and (max-width: 768px) {
+    display: block;
+    padding: 25px 0;
   }
 `;
 const MainContent = styled.div`
   width: 67%;
-  @media only screen and (max-width:768px){
-width:100%; 
-}
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 const RightContent = styled.div`
   width: 31%;
-  @media only screen and (max-width:768px){
-width:100%;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
   }
 `;

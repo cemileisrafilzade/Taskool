@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import { ProfilePage } from "./pages/ProfilePage";
-import './App.css';
+import "./App.css";
 
 function App() {
   return (

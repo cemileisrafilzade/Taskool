@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  box-sizing: border-box;
-  background-color: gray;
-  /* flex: 1; */
+  
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -10,10 +8,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body,html{
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  flex-wrap: wrap;
+}
+*{
+  box-sizing: border-box;
+
+}
 .fas {
   color: gray;
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+

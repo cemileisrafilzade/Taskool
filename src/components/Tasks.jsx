@@ -1,11 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { CurrentTasks, CompletedTasks } from "../routes";
 
 export const Tasks = () => {
@@ -15,10 +10,12 @@ export const Tasks = () => {
 
       <Router>
         <NavBar>
-       <Link style={{textDecoration:"none" }} to="/">  
-          <NavLinks > Current</NavLinks></Link>
-         <Link style={{textDecoration:"none"}} to="completed"><NavLinks>Completed
-          </NavLinks></Link> 
+          <Link style={{ textDecoration: "none" }} to="/">
+            <NavLinks> Current</NavLinks>
+          </Link>
+          <Link style={{ textDecoration: "none" }} to="completed">
+            <NavLinks>Completed</NavLinks>
+          </Link>
         </NavBar>
 
         <Routes>
@@ -34,7 +31,6 @@ const Container = styled.div`
   background: white;
   border-radius: 0.5rem;
   padding: 1.5625rem;
- 
 `;
 const ComponentTitle = styled.div`
   font-size: 1.25rem;
@@ -45,19 +41,17 @@ const ComponentTitle = styled.div`
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-
 `;
 const NavBar = styled.div`
   display: flex;
   padding: 0.9375rem;
-  margin:0.3125rem;
-
+  margin: 0.3125rem;
 `;
 
 const NavLinks = styled.a`
   color: #bdbdbd;
   margin-bottom: 0.625rem;
-  text-decoration:none;
+  text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5rem;
@@ -71,8 +65,7 @@ const NavLinks = styled.a`
   &:active {
     color: #78de78;
   }
-  @media only screen and (max-width:768px){
-  padding: 0.625rem 0.625rem;
-
-}
+  @media only screen and (max-width: 768px) {
+    padding: 0.625rem 0.625rem;
+  }
 `;

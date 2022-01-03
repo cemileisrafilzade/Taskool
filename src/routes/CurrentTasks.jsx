@@ -13,11 +13,11 @@ export const CurrentTasks = () => {
         <DisplayFlex>
           <RedTxt>Due 21 august</RedTxt>
           <DisplayFlex>
-          <ComplementationDegree>
+            <ComplementationDegree>
               <CompletedDegree></CompletedDegree>
             </ComplementationDegree>
-         
-          <LightTxt>60% completed</LightTxt> </DisplayFlex>
+            <LightTxt>60% completed</LightTxt>{" "}
+          </DisplayFlex>
         </DisplayFlex>
       </TaskComponents>
 
@@ -30,10 +30,13 @@ export const CurrentTasks = () => {
 
         <DisplayFlex>
           <RedTxt>Due 01 dec</RedTxt>
-          <DisplayFlex>            <ComplementationDegree>
+          <DisplayFlex>
+            {" "}
+            <ComplementationDegree>
               <CompletedDegree></CompletedDegree>
             </ComplementationDegree>
-          <LightTxt>10% completed</LightTxt></DisplayFlex>
+            <LightTxt>10% completed</LightTxt>
+          </DisplayFlex>
         </DisplayFlex>
       </TaskComponents>
 
@@ -48,9 +51,7 @@ export const CurrentTasks = () => {
           <RedTxt>Due 01 dec</RedTxt>
 
           <DisplayFlex>
-            <ComplementationDegree>
-         
-            </ComplementationDegree>
+            <ComplementationDegree></ComplementationDegree>
             <LightTxt>not started yet</LightTxt>
           </DisplayFlex>
         </DisplayFlex>
@@ -69,6 +70,10 @@ const TaskComponents = styled.div`
   padding: 0.9375rem;
   margin-bottom: 1.25rem;
   cursor: pointer;
+  @media only screen and (max-width: 450px) {
+    margin: 0.3125rem;
+    margin-bottom: 1.25rem;
+  }
 `;
 const Items = styled.div`
   display: flex;
@@ -108,6 +113,10 @@ const DisplayFlex = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* @media only screen and (max-width:450px){
+    display: block;
+  
+} */
 `;
 const ComplementationDegree = styled.div`
   width: 7rem;
