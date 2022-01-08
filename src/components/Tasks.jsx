@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { CurrentTasks, CompletedTasks } from "../routes";
+import { CurrentTasks, CompletedTasks } from "./routes";
 
 export const Tasks = () => {
   return (
@@ -10,7 +10,7 @@ export const Tasks = () => {
 
       <Router>
         <NavBar>
-          <Link style={{ textDecoration: "none" }} to="/">
+          <Link  style={{ textDecoration: "none" }} to="/">
             <NavLinks> Current</NavLinks>
           </Link>
           <Link style={{ textDecoration: "none" }} to="completed">

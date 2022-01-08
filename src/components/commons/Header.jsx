@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "../images/Logo.png";
-import ProfileImg from "../images/userImg.png";
-import SearchIcon from "../images/icons/search.png";
+import Logo from "../../images/Logo.png";
+import ProfileImg from "../../images/userImg.png";
+import SearchIcon from "../../images/icons/search.png";
 export const Header = () => {
   return (
     <Container>

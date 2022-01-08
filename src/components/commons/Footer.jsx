@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "../images/Logo.png";
-import Instagram from "../images/icons/instagram.png";
-import Facebook from "../images/icons/facebook.png";
-import Youtube from "../images/icons/youtube.png";
-import Twitter from "../images/icons/twitter.png";
+import Logo from "../../images/Logo.png";
+import Instagram from "../../images/icons/instagram.png";
+import Facebook from "../../images/icons/facebook.png";
+import Youtube from "../../images/icons/youtube.png";
+import Twitter from "../../images/icons/twitter.png";
 
 export const Footer = () => {
   return (
