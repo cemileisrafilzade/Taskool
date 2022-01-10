@@ -7,21 +7,21 @@ export const BuildingPortfolio = () => {
       <Title>For Building Portfolio</Title>
       <ul>
         <ListItem>
-          <i class="fas fa-brain"></i>
+          <i className="fas fa-brain"></i>
           <div>
             <Header>Skill building</Header>
             <LightTxt>Build your future</LightTxt>
           </div>
         </ListItem>
         <ListItem>
-          <i class="far fa-clipboard"></i>
+          <i className="far fa-clipboard"></i>
           <div>
             <Header>Testing and Simulation</Header>
             <LightTxt>Take a quiz and improve your skills </LightTxt>
           </div>
         </ListItem>
         <ListItem>
-          <i class="fas fa-chart-pie"></i>
+          <i className="fas fa-chart-pie"></i>
           <div>
             <Header>Business task</Header>
             <LightTxt>Learn creating business plan</LightTxt>

@@ -6,7 +6,7 @@ export const CurrentTasks = () => {
       <TaskComponents>
         <DisplayFlex>
           <Header>UX Fundamentals & Design Research</Header>
-          <i class="fas fa-thumbtack"></i>
+          <i className="fas fa-thumbtack"></i>
         </DisplayFlex>
         <LightTxt>Quiz</LightTxt>
 
@@ -24,7 +24,7 @@ export const CurrentTasks = () => {
       <TaskComponents>
         <DisplayFlex>
           <Header>Sürətli oxuma və yazma</Header>
-          <i class="fas fa-thumbtack"></i>
+          <i className="fas fa-thumbtack"></i>
         </DisplayFlex>
         <LightTxt>Reading, writing</LightTxt>
 
@@ -43,7 +43,7 @@ export const CurrentTasks = () => {
       <TaskComponents>
         <DisplayFlex>
           <Header>Lego in our life</Header>
-          <i class="fas fa-thumbtack"></i>
+          <i className="fas fa-thumbtack"></i>
         </DisplayFlex>
         <LightTxt>Virtual lab</LightTxt>
 

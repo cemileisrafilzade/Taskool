@@ -2,27 +2,28 @@ import React from "react";
 import styled from "styled-components";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { CurrentTasks, CompletedTasks } from "./routes";
-
+import {RouteLinks} from "./links";
 export const Tasks = () => {
   return (
     <Container>
       <ComponentTitle>Tasks</ComponentTitle>
 
-      <Router>
+ 
         <NavBar>
-          <Link  style={{ textDecoration: "none" }} to="/">
+          <RouteLinks/>
+          {/* <Link  style={{ textDecoration: "none" }} to="/">
             <NavLinks> Current</NavLinks>
           </Link>
-          <Link style={{ textDecoration: "none" }} to="completed">
+          <Link style={{ textDecoration: "none" }} to="/completed">
             <NavLinks>Completed</NavLinks>
-          </Link>
+          </Link> */}
         </NavBar>
 
         <Routes>
           <Route exact path="/" element={<CurrentTasks />}></Route>
-          <Route exact path="/completed" element={<CompletedTasks />}></Route>
+          <Route path="/completed" exact element={<CompletedTasks />}></Route>
         </Routes>
-      </Router>
+    
     </Container>
   );
 };

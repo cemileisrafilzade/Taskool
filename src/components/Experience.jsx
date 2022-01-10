@@ -6,7 +6,7 @@ export const Experience = () => {
   return (
     <Container>
       <ComponentTitle>
-        Experience <i class="fas fa-plus"></i>
+        Experience <i className="fas fa-plus"></i>
       </ComponentTitle>
       <ul>
         <ListItem>
@@ -37,7 +37,7 @@ export const Experience = () => {
 
       <Hr />
       <ComponentTitle>
-        Education <i class="fas fa-plus"></i>
+        Education <i className="fas fa-plus"></i>
       </ComponentTitle>
       <ul>
         <ListItem>

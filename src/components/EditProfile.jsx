@@ -9,7 +9,7 @@ export const EditProfile = () => {
         <UserImg src={ProfileImg} />
 
         <EditBtn>
-          <i class="fas fa-pen"></i> Edit Profile
+          <i className="fas fa-pen"></i> Edit Profile
         </EditBtn>
         <UserName>Mirzə Mammadov</UserName>
         <PositionName>Product Designer</PositionName>

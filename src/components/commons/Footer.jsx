@@ -39,21 +39,21 @@ export const Footer = () => {
           <p>
             {" "}
             <span>
-              <i class="fas fa-map-marker-alt"></i>
+              <i className="fas fa-map-marker-alt"></i>
             </span>{" "}
             M. K. Ataturk avenue 89, Baku, Azerbaijan
           </p>
           <p>
             {" "}
             <span>
-              <i class="far fa-envelope"></i>
+              <i className="far fa-envelope"></i>
             </span>{" "}
             gyunelmammedova@gmail.com
           </p>
           <p>
             {" "}
             <span>
-              <i class="fas fa-phone-alt"></i>
+              <i className="fas fa-phone-alt"></i>
             </span>{" "}
             *2108
           </p>
@@ -62,7 +62,7 @@ export const Footer = () => {
       <Hr />
       <DisplayFlex>
         <p>
-          <i class="far fa-copyright"></i> Taskool 2021. Bütün hüquqlar qorunur.
+          <i className="far fa-copyright"></i> Taskool 2021. Bütün hüquqlar qorunur.
         </p>
         <div>
           <a>Qaydalar və şərtlər</a>
