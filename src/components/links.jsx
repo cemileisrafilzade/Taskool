@@ -6,10 +6,10 @@ import styled from "styled-components";
 export const RouteLinks=() => (
     <div>
   
-  <Link  style={{ textDecoration: "none" }} to="/">
+  <Link  style={{ textDecoration: "none" }} to="/profilePage">
             <NavLinks> Current</NavLinks>
           </Link>
-          <Link style={{ textDecoration: "none" }} to="/completed">
+          <Link style={{ textDecoration: "none" }} to="/profilePage/completed">
             <NavLinks>Completed</NavLinks>
           </Link>
    
