@@ -1,21 +1,54 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "../../images/Logo.png";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
+import axios from "axios";
+
 export const Register = () => {
   const navigate = useNavigate();
-  const submitForm = (e) => {
+
+  const handleSubmit = (e) => {
     e.preventDefault();
+    const formInfos = new FormData();
+    if (registired) {
+      console.log("username", e.target.email.value);
+      console.log("password", e.target.password.value);
+
+      formInfos.append("username", e.target.email.value);
+      formInfos.append("password", e.target.password.value);
+      axios
+        .post("http://3.68.156.86:8000/api/v1/login/", formInfos)
+        .then((res) => {
+          console.log(res);
+        });
+    } else {
+      console.log(
+        "is_student",
+        e.target.isStudent.value === "student" ? true : false
+      );
+      console.log("occupation", "");
+      console.log("first_name", e.target.firstName.value);
+      console.log("last_name", e.target.lastName.value);
+      console.log("email", e.target.email.value);
+      console.log("password", e.target.password.value);
+
+      formInfos.append("first_name", e.target.firstName.value);
+      formInfos.append("last_name", e.target.lastName.value);
+      formInfos.append("email", e.target.email.value);
+      formInfos.append("password", e.target.password.value);
+      formInfos.append("occupation", "");
+      axios.post("http://3.68.156.86:8000/api/v1/register/");
+    }
     navigate("/profilePage");
   };
 
   // States for registration
-  const [name, setName] = useState("");
-  const [surName, setSurName] = useState("");
-  const [email, setEmail] = useState("");
-  const [profile, setProfile] = useState("");
-  const [phone, setPhone] = useState("");
+  // const [name, setName] = useState("");
+  // const [surName, setSurName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [profile, setProfile] = useState("");
+  // const [phone, setPhone] = useState("");
 
   const [registired, setRegistired] = useState(false);
 
@@ -28,9 +61,9 @@ export const Register = () => {
     setRegistired(false);
   };
   // Handling the name change
-  const handleName = (e) => {
-    setName(e.target.value);
-  };
+  // const handleName = (e) => {
+  //   setName(e.target.value);
+  // };
 
   //password visibility
   const [isVisible, setVisible] = useState(false);
@@ -72,11 +105,11 @@ export const Register = () => {
       ) : (
         <p>Sizi yenidən görməyə şadıq</p>
       )}
-      <form onSubmit={submitForm} action="">
+      <form onSubmit={(e) => handleSubmit(e)} action="">
         {!registired ? (
           <>
             <InputContainer>
-              <select required>
+              <select id="isStudent" required>
                 <option value="">Profili Seç</option>
                 <option value="student">Tələbə</option>
                 <option value="teacher">Müəllim</option>
@@ -84,27 +117,28 @@ export const Register = () => {
             </InputContainer>
 
             <InputContainer>
-              <input
-                required
-                onChange={handleName}
-                type="text"
-                placeholder="Ad"
-              />
+              <input required type="text" id="firstName" placeholder="Ad" />
             </InputContainer>
             <InputContainer>
-              <input required type="text" placeholder="Soyad" />
+              <input required type="text" id="lastName" placeholder="Soyad" />
             </InputContainer>
           </>
         ) : (
           ``
         )}
         <InputContainer>
-          <input required type="email" placeholder="E-mail ünvanı" />
+          <input required type="email" id="email" placeholder="E-mail ünvanı" />
         </InputContainer>
         {!registired ? (
           <>
             <InputContainer>
-              <input required type="tel" placeholder="Əlaqə nömrəsi" />
+              <input
+                required
+                autoComplete="off"
+                id="number"
+                type="tel"
+                placeholder="Əlaqə nömrəsi"
+              />
             </InputContainer>
           </>
         ) : (
@@ -113,6 +147,7 @@ export const Register = () => {
         <InputContainer className="passwordField">
           <input
             required
+            id="password"
             type={isVisible ? "text" : "password"}
             placeholder="Şifrə"
           />
