@@ -10,6 +10,10 @@ export const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios.defaults.headers = {
+"Content-Type":"application/json",
+
+    }
     const formInfos = new FormData();
     if (registired) {
       console.log("username", e.target.email.value);
@@ -38,7 +42,7 @@ export const Register = () => {
       formInfos.append("email", e.target.email.value);
       formInfos.append("password", e.target.password.value);
       formInfos.append("occupation", "");
-      axios.post("http://3.68.156.86:8000/api/v1/register/");
+      axios.post("http://3.68.156.86:8000/api/v1/register/",formInfos);
     }
     navigate("/profilePage");
   };
@@ -80,7 +84,7 @@ export const Register = () => {
             Artıq hesabınız var? &nbsp;
             <span>
               <a onClick={Login} href="">
-                {" "}
+            
                 Daxil Olun
               </a>
             </span>
@@ -90,7 +94,7 @@ export const Register = () => {
             Hesabınız yoxdur?
             <span>
               <a onClick={Register} href="">
-                {" "}
+            
                 Qeydiyyatdan keçin
               </a>
             </span>
@@ -105,7 +109,7 @@ export const Register = () => {
       ) : (
         <p>Sizi yenidən görməyə şadıq</p>
       )}
-      <form onSubmit={(e) => handleSubmit(e)} action="">
+      <form onSubmit={e => handleSubmit(e)} action="">
         {!registired ? (
           <>
             <InputContainer>

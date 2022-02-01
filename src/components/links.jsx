@@ -4,18 +4,20 @@ import styled from "styled-components";
 
 
 export const RouteLinks=() => (
-    <div>
+    <Container>
   
-  <Link  style={{ textDecoration: "none" }} to="/profilePage">
-            <NavLinks> Current</NavLinks>
+  <Link className="links" style={{ textDecoration: "none" }} to="/profilePage">
+           Current
           </Link>
-          <Link style={{ textDecoration: "none" }} to="/profilePage/completed">
-            <NavLinks>Completed</NavLinks>
+          <Link className="links" style={{ textDecoration: "none" }} to="/profilePage/completed">
+       Completed
           </Link>
    
-    </div>
+    </Container>
   )
-  const NavLinks = styled.a`
+  const Container=styled.div`
+  
+  .links{
   color: #bdbdbd;
   margin-bottom: 0.625rem;
   text-decoration: none;
@@ -34,5 +36,5 @@ export const RouteLinks=() => (
   }
   @media only screen and (max-width: 768px) {
     padding: 0.625rem 0.625rem;
-  }
+  }}
 `;

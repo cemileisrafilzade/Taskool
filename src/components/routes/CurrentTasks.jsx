@@ -16,7 +16,7 @@ export const CurrentTasks = () => {
             <ComplementationDegree>
               <CompletedDegree></CompletedDegree>
             </ComplementationDegree>
-            <LightTxt>60% completed</LightTxt>{" "}
+            <LightTxt>60% completed</LightTxt>
           </DisplayFlex>
         </DisplayFlex>
       </TaskComponents>
@@ -31,7 +31,7 @@ export const CurrentTasks = () => {
         <DisplayFlex>
           <RedTxt>Due 01 dec</RedTxt>
           <DisplayFlex>
-            {" "}
+           
             <ComplementationDegree>
               <CompletedDegree></CompletedDegree>
             </ComplementationDegree>
